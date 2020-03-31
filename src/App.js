@@ -7,7 +7,7 @@ import { ApplicationRoutes } from "./ApplicationRoutes";
 export default function App() {
   return (
     <div className="App">
-      <h1>Melhores Filmes</h1>
+      <h1>Melhores Filmess</h1>
       <ApplicationRoutes />
     </div>
   );
