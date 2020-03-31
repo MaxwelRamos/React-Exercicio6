@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { MoviesService } from "../services/MoviesService";
+import { MovieDetailView } from "./MovieDetailView";
+import { MoviesService } from "../../services/MoviesService";
 
-export const MovieDetail = (props) => {
+export const MovieDetailContainer = (props) => {
   const [movieDetail, setMovieDetail] = useState({});
 
   const requestMoviews = async () => {
@@ -13,14 +14,6 @@ export const MovieDetail = (props) => {
     requestMoviews();
   }, {});
 
-  return (
-    <div>
-      Detalhes:
-      <br></br>
-      Titulo Original - {movieDetail.original_title}
-      <br></br>
-      Titulo - {movieDetail.title}
-      <br></br>
-    </div>
-  );
+  return <MovieDetailView movieDetail={movieDetail} />
+
 };
